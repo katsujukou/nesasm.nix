@@ -1,13 +1,20 @@
 { pkgs ? import <nixpkgs> {} }:
 
 let
-  nesasm = import ./nesasm.nix {
-    inherit pkgs;
+  inputs = {
+    nesasm = import ./nesasm.nix {
+      inherit pkgs;
+    };
   };
-in rec {
-  buildInputs = [ nesasm ];
-  shell = pkgs.runCommand "nesasm-nix-shell"
-    {
-      buildInputs = buildInputs;
-    } "";
-}
+
+  buildInputs = builtins.attrValues inputs;
+
+in 
+  inputs // {
+    inputs = inputs;
+    buildInputs = buildInputs;
+    shell = pkgs.runCommand "nesasm-nix-shell"
+      {
+        buildInputs = buildInputs;
+      } "";
+  }

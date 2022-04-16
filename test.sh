@@ -1,5 +1,5 @@
 #!/usr/bin/env nix-shell
-#!nix-shell -i bash
+#!nix-shell ci.nix -i bash
 
 set -e
 
