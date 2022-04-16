@@ -1,7 +1,7 @@
 # NESASM Nix
 Nix derivations for building nesasm and putting them to use.
 
-[![tests](https://github.com/katsujukou/nesasm.nix/actions/workflows/ci.yml/badge.svg)](https://github.com/katsujukou/nesasm.nix/actions/workflows/ci.yml)
+[![test](https://github.com/katsujukou/nesasm.nix/workflows/test/badge.svg)](https://github.com/katsujukou/nesasm.nix/actions/workflows/ci.yml)
 
 ## Usage
 By `shell.nix`:
