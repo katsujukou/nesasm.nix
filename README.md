@@ -1,5 +1,5 @@
 # NESASM Nix
-Nix derivations for building nesasm and putting them to use.
+Nix derivations for building nesasm and putting to use.
 
 [![test](https://github.com/katsujukou/nesasm.nix/workflows/test/badge.svg)](https://github.com/katsujukou/nesasm.nix/actions/workflows/ci.yml)
 
